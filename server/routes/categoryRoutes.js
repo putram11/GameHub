@@ -3,24 +3,28 @@ const categoryRouter = express.Router();
 const CategoryController = require("../controllers/CategoryController");
 const authorizationAdmin = require("../middleware/authorizationAdmin");
 
+// Category Routes
 categoryRouter.post(
-  "/add",
-  authorizationAdmin,
+  "/add", 
+  authorizationAdmin, 
   CategoryController.createCategory
 );
+
 categoryRouter.get(
-  "/all",
-  authorizationAdmin,
+  "/all", 
+  authorizationAdmin, 
   CategoryController.getAllCategories
 );
+
 categoryRouter.put(
-  "/:id/edit",
-  authorizationAdmin,
+  "/:id/edit", 
+  authorizationAdmin, 
   CategoryController.updateCategory
 );
+
 categoryRouter.delete(
-  "/:id/delete",
-  authorizationAdmin,
+  "/:id/delete", 
+  authorizationAdmin, 
   CategoryController.deleteCategory
 );
 
