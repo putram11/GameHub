@@ -3,7 +3,7 @@ const pubRouter = express.Router();
 const PublicController = require("../controllers/PublicController");
 const CategoryController = require("../controllers/CategoryController");
 
-// Routes for public site
+// Public Routes
 pubRouter.get("/articles", PublicController.getAllArticles);
 pubRouter.get("/arti", PublicController.allArticles);
 pubRouter.get("/articles/:id", PublicController.getArticleById);
