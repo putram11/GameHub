@@ -4,7 +4,13 @@ const UserController = require("../controllers/UserController");
 const authorizationAdmin = require("../middleware/authorizationAdmin");
 const authentication = require("../middleware/authentication");
 
+// User Routes
 userRouter.post("/login", UserController.login);
-userRouter.post("/add-user", authentication, authorizationAdmin, UserController.addUser);
+userRouter.post(
+  "/add-user",
+  authentication,
+  authorizationAdmin,
+  UserController.addUser
+);
 
 module.exports = userRouter;
